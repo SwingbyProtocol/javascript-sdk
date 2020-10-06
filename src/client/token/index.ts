@@ -345,7 +345,7 @@ class TokenManagement {
     amount: Coin[],
     lockTime: number
   ) {
-    checkCoins(amount)
+    // checkCoins(amount)
 
     if (description.length > 128) {
       throw new Error("description is too long")

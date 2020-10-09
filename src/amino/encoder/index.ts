@@ -158,7 +158,7 @@ export const encodeObjectBinary = (obj: any, isByteLenPrefix?: boolean) => {
 
     if (isDefaultValue(obj[key])) return
 
-    if (is.array(obj[key])) {
+    if (is.array(obj[key]) && obj[key].length > 0) {
       bufferArr.push(encodeArrayBinary(index, obj[key]))
     } else {
       bufferArr.push(encodeTypeAndField(index, obj[key]))

@@ -367,7 +367,7 @@ class TokenManagement {
       from: fromAddress,
       time_lock_id: id,
       description: description,
-      amount,
+      amount: amount && amount.length ? amount : null,
       lock_time: lockTime,
     }
 
